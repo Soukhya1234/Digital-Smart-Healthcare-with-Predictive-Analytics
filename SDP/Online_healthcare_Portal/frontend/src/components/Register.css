@@ -1,0 +1,120 @@
+/* Register.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* blue gradient matching navbar */
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+form, .role-selection {
+  background-color: #ffffff;
+  margin-top: 50px;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin-top: 180px;
+}
+
+h2 {
+  color: #305c9a; /* matches navbar gradient tone */
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  border-color: #66a6ff;
+  box-shadow: 0 0 8px rgba(102, 166, 255, 0.4);
+  background-color: #fff;
+}
+
+button {
+  padding: 12px;
+  background: linear-gradient(to right, #305c9a, #66a6ff); /* matches navbar gradient */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(102, 166, 255, 0.4);
+}
+
+/* Role selection buttons */
+.role-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.role-buttons button {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #305c9a, #66a6ff);
+  color: white;
+}
+
+.role-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(102, 166, 255, 0.4);
+}
+
+/* Message Text */
+p {
+  text-align: center;
+  color: #ef4444; /* red for error messages */
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form, .role-selection {
+    width: 90%;
+    padding: 25px 20px;
+  }
+  .role-buttons {
+    flex-direction: column;
+  }
+  .role-buttons button {
+    width: 100%;
+  }
+}

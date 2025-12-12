@@ -1,0 +1,253 @@
+
+
+/* -------------------- Dashboard Container -------------------- */
+.doctor-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 40px;
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin-top: 300px;
+}
+
+/* Dashboard Title */
+.doctor-dashboard h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #2c86e0;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+}
+
+/* -------------------- Layout for Calendar + Appointments -------------------- */
+.dashboard-layout {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Calendar Section */
+.calendar-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.calendar-section h2 {
+  margin-bottom: 20px;
+  color: #2c86e0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* React Calendar Base */
+.react-calendar {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calendar Navigation (Month/Year Header) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.react-calendar__navigation button {
+  min-width: 50px;
+  background-color: #2c86e0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #1f5cb8;
+}
+
+/* Month and Year Text */
+.react-calendar__navigation__label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c86e0;
+}
+
+/* Weekdays */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 8px 0;
+}
+
+/* Calendar Tiles */
+.react-calendar__tile {
+  height: 60px;
+  max-width: 60px;
+  background-color: #fff;
+  margin: 3px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #000; /* default black */
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e0f0ff;
+  transform: scale(1.05);
+}
+
+/* Today */
+.react-calendar__tile--now {
+  border: 2px solid #2c86e0;
+  font-weight: bold;
+}
+
+/* Selected date */
+.react-calendar__tile--active {
+  background-color: #2c86e0 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* -------------------- Status Circles Over Dates -------------------- */
+.status-dots {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Status Colors */
+.status-dot.pending { background-color: #fbbf24; }  /* Yellow */
+.status-dot.approved { background-color: #2c86e0; } /* Blue */
+.status-dot.rejected { background-color: #ef4444; } /* Red */
+
+/* Optional: Background color for tile based on status */
+.react-calendar__tile.pending { background-color: #fff7e6; }
+.react-calendar__tile.approved { background-color: #e6f0ff; }
+.react-calendar__tile.rejected { background-color: #ffe6e6; }
+
+/* Calendar Legend */
+.calendar-legend {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.calendar-legend .legend {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.calendar-legend .pending { background-color: #fbbf24; }
+.calendar-legend .approved { background-color: #2c86e0; }
+.calendar-legend .rejected { background-color: #ef4444; }
+
+/* -------------------- Appointments Section -------------------- */
+.dashboard-content {
+  flex: 2;
+  min-width: 500px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.dashboard-content h2 {
+  margin-bottom: 15px;
+  color: #2c86e0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Appointments Table */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.appointment-row.pending { background-color: #fff7e6; }
+.appointment-row.approved { background-color: #e6f0ff; }
+.appointment-row.rejected { background-color: #ffe6e6; }
+
+.appointments-table th {
+  background-color: #2c86e0;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Buttons */
+.appointments-table button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.appointments-table button:hover { opacity: 0.9; }
+.appointments-table button:first-child { background-color: #2c86e0; }
+.appointments-table button:last-child { background-color: #ef4444; }
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 1200px) {
+  .dashboard-layout { flex-direction: column; gap: 25px; }
+  .appointments-table th, .appointments-table td { font-size: 14px; padding: 8px 10px; }
+}
+
+@media (max-width: 600px) {
+  .react-calendar__tile { height: 50px; max-width: 50px; font-size: 0.85rem; }
+  .react-calendar__navigation__label { font-size: 1rem; }
+}

@@ -1,0 +1,144 @@
+html {
+  scroll-padding-top: 6rem;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  color: #333;
+  animation: backgroundSlideshow 12s infinite ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.heart-container {
+  max-width: 500px;
+ /* top:75px; */
+  margin: 0 auto;
+  margin: 150rem auto 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.heart-container h2 {
+  margin-bottom: 1.5rem;
+  color: #023e8a;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Labels */
+.heart-container label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #1d3557;
+}
+
+/* .form-group{
+  margin-top:2pm;
+
+} */
+
+/* Input and info button wrapper */
+.input-with-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-with-info input,
+.input-with-info select {
+  flex: 1;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Info button */
+.info-button {
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #ccc;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 100%;
+  z-index: 2;
+  margin-top: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styles */
+.heart-container button {
+  margin-top: 1.5rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.4s ease;
+  display: block;
+}
+
+.btn {
+  width: 100%;
+}
+
+.heart-container button:hover {
+  background-color: #0d47a1;
+}
+
+/* Background slideshow animation */
+@keyframes backgroundSlideshow {
+  0% {
+    background-image: url('C:\Users\Sharanamma\OneDrive\Desktop\ONLINE_PROJECT\Online_healthcare_Portal\frontend\src\assets\brain.png');
+  }
+  50% {
+    background-image: url('C:\Users\Sharanamma\OneDrive\Desktop\ONLINE_PROJECT\Online_healthcare_Portal\frontend\src\assets\heart.png');
+  }
+  100% {
+    background-image: url('C:\Users\Sharanamma\OneDrive\Desktop\ONLINE_PROJECT\Online_healthcare_Portal\frontend\src\assets\brain.png');
+  }
+}

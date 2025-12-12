@@ -1,0 +1,91 @@
+
+
+
+.doctor-dashboard {
+  max-width: 1200px;
+  margin: 150px auto;
+  padding: 20px 30px;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+.doctor-dashboard h1 {
+  text-align: center;
+  color: #2c86e0;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+
+}
+
+/* Three columns layout */
+.appointment-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each column */
+.status-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.status-column h2 {
+  color: #2c86e0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Appointment cards */
+.appointment-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Status colors */
+.appointment-card.pending { border-left: 5px solid #fbbf24; }
+.appointment-card.approved { border-left: 5px solid #2c86e0; }
+.appointment-card.rejected { border-left: 5px solid #ef4444; }
+
+/* Buttons inside cards */
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button.approve { background-color: #2c86e0; }
+button.approve:hover { background-color: #1f5cb8; }
+
+button.reject { background-color: #ef4444; }
+button.reject:hover { background-color: #dc2626; }
+
+button.start { background-color: #2c86e0; width: 100%; margin-top: 10px; }
+button.start:hover { background-color: #1f5cb8; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .appointment-columns { flex-direction: column; }
+}
